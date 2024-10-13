@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    font-size: 16px;
+    transition: all 1s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color:  rgb(102, 102, 102);
+    display: flex;
+    align-items: end;
+
+}
+
+
+.login {
+    height: 100dvh;
+    
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login--form {
+    box-shadow: 0px 0px 10px black;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(53, 54, 54);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 40px;
+    margin: 20px;
+}
+
+.login--form h1 {
+    font-size: 3rem;
+}
+
+.login--form input {
+    width: 75%;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.login--form button{
+    margin-bottom: 40px;
+    width: 75%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    color: beige;
+    cursor: pointer;
+    background-color: rgba(7, 87, 124, 0.541);
+    box-shadow: 0px 0px 50px rgb(60, 50, 145);
+}
+
+
+
+.container {
+    
+    background-color: rgb(102, 102, 102);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#messages {
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    gap: 15px;
+}
+
+#mensagem, #msdozoto {
+    align-self: flex-end;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    border-radius: 20px 20px 0px 20px;
+    padding: 30px;
+    max-width: 350px;
+    margin-right: 15px;
+
+}
+
+#msdozoto {
+    align-self: flex-start;
+    border-radius: 0px 20px 20px 20px;
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+#msdozoto h6 {
+    margin-right: 10px;
+    color: rgba(16, 143, 54, 0.589);
+}
+
+#msdozoto p {
+    margin-left: 5px;
+}
+
+#mensagem:last-of-type{
+    margin-bottom: 125px;
+}
+#msdozoto:last-of-type{
+    margin-bottom: 125px;
+}
+
+#sm {
+    position: fixed;
+    bottom: 15px;
+    border-radius: 40px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: rgb(49, 48, 48);
+    box-shadow: 0px 0px 10px black;
+
+}
+
+#sm form {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sm input {
+    flex: 1;
+    padding: 15px;
+    text-align: left;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    background-color:  rgb(85, 85, 85);
+    color: white;
+}
+
+#sm input:focus {
+    outline: 2px solid  rgb(71, 71, 71);
+}
+
+#sm button {
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
+    border-radius: 40px;
+    font-size: 0.85rem;
+}
