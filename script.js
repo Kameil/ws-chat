@@ -30,11 +30,15 @@ sendmessage.addEventListener("submit", (event) => {
 });
 
 socket.onerror = (error) => {
-    window.location.href += "/error.html"
+    let url = window.location.href
+    let urlsemocoiso = url.replace("index.html", "")
+    window.location.href = urlsemocoiso + "/error.html"
 }
 
 socket.onclose = () => {
-    window.location.href += "/error.html"
+    let url = window.location.href
+    let urlsemocoiso = url.replace("index.html", "")
+    window.location.href = urlsemocoiso + "/error.html"
 }
 
 socket.onmessage = function(event) {
