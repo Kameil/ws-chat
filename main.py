@@ -19,8 +19,8 @@ def flaskserver():
     @app.route("/script.js")
     def script():
         return send_file("script.js", "text/javascript")
-    @app.route("/script.js")
-    def script():
+    @app.route("/error.html")
+    def error():
         return send_file("error.html")
 
     @app.route("/style.css")
