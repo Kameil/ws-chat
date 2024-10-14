@@ -157,27 +157,29 @@ body {
 }
 
 #msdozoto {
+    display: flex;  /* Certifique-se que #msdozoto é flex também */
+    flex-direction: column; /* Mantém a direção em coluna */
     align-self: flex-start;
+    align-items: flex-start; /* Faz o conteúdo alinhar à esquerda */
     border-radius: 0px 20px 20px 20px;
     margin-right: 0px;
     margin-left: 15px;
-    
     max-width: 50%;
+    padding: 10px;
 }
 
 #msdozoto h6 {
-    align-items: flex-start;
-    margin-right: 10px;
+    align-self: flex-start; /* Alinha o h6 ao topo e à esquerda */
+    margin-bottom: 10px; /* Adiciona um espaço inferior, se necessário */
     font-size: 1rem;
 }
 
-#msdozoto p{
+#msdozoto p {
     flex-wrap: wrap;
-    margin-left: -10px;
     width: 100%;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
-#mensagem p {
+#mensagem p, #msdozoto p {
     justify-content: end;
     width: 100%;
     overflow-wrap: break-word;
