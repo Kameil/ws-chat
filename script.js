@@ -1,9 +1,25 @@
-const socket = new WebSocket('wss://pkf12q20-8765.brs.devtunnels.ms');
+const socket = new WebSocket('wss://pkf12q20-8766.brs.devtunnels.ms');
 const sendmessage = document.getElementById("sendmessage");
 const loginform = document.getElementById("login")
 const loginsct = document.getElementById("bglogin")
 const container = document.getElementById("container")
+const apagrbtn = document.getElementById("dhistory")
 
+apagrbtn.addEventListener("click", () => {
+    var divConteudo = localStorage.getItem('conteudoDiv');
+    if(divConteudo) {
+        localStorage.removeItem("conteudoDiv")
+        const messagesdiv = document.getElementById("messages")
+        messagesdiv.innerHTML = ""
+        const div = document.createElement("div")
+        div.id = "mensagem"
+        const message = document.createElement("p")
+        message.innerHTML = "Mensagens Apagadas..."
+        div.appendChild(message)
+        messagesdiv.appendChild(div)
+    }
+    
+})
 
 
 
@@ -67,21 +83,25 @@ sendmessage.addEventListener("submit", (event) => {
     mensagem.value = "";
 });
 
+const statuspopup = document.getElementById("status")
+const statusp = document.getElementById("statusp")
 socket.onopen = () => {
-    const conectingbar = document.getElementById("status")
-    conectingbar.style.display = "none"
+    
+    statuspopup.style.display = "none"
 }
 
 socket.onerror = (error) => {
-    let url = window.location.href
-    let urlsemocoiso = url.replace("index.html", "")
-    window.location.href = urlsemocoiso + "/error.html"
+    statuspopup.style.display = "block"
+    statuspopup.style.backgroundColor = 'red'
+    statusp.innerHTML = "ocorreu um erro!"
+    
+
 }
 
 socket.onclose = () => {
-    let url = window.location.href
-    let urlsemocoiso = url.replace("index.html", "")
-    window.location.href = urlsemocoiso + "/error.html"
+    statuspopup.style.display = "block"
+    statuspopup.style.backgroundColor = 'red'
+    statusp.innerHTML = "Desconectado."
 }
 
 socket.onmessage = function(event) {

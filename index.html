@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chat dos loucos</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=send" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <div id="status">
-        <p>conectando...</p>
+        <p id="statusp">conectando...</p>
     </div>
     <section class="login" id="bglogin">
         <div class="login--form">
@@ -22,11 +23,14 @@
     <section class="container" id="container"> 
         <div id="messages">
         </div>
+        <button id="dhistory">
+            <span class="material-icons">delete</span>
+        </button>
         <div id="sm">
             <form id="sendmessage">
                 <input type="text" id="message" placeholder="Digite aqui sua mensagem" required autocomplete="off" maxlength="1000" autofocus>
                 <button type="submit">
-                    <span class="material-symbols-outlined">send</span>
+                    <span class="material-icons">send</span>
                 </button>
             </form>
         </div>

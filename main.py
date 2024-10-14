@@ -49,6 +49,7 @@ async def echo(websocket):
         connected_clients.remove(websocket)
 
 async def main():
+    print("iniciado")
     async with serve(echo, "0.0.0.0", 8765):
         await asyncio.get_running_loop().create_future()  # run forever
 
