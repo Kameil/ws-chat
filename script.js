@@ -5,6 +5,18 @@ const loginsct = document.getElementById("bglogin")
 const container = document.getElementById("container")
 
 
+
+
+function getRandomPredefinedColor() {
+    // Array com uma lista de cores predefinidas
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#33FFF9', '#F3FF33', '#7D33FF'];
+
+    // Escolhe uma cor aleatoriamente da lista
+    const randomIndex = Math.floor(Math.random() * colors.length);
+
+    return colors[randomIndex];
+}
+
 const userid = Math.floor(Math.random() * 1000); 
 
 loginform.addEventListener("submit", (event) => {
@@ -22,7 +34,8 @@ sendmessage.addEventListener("submit", (event) => {
     const mensagemJson = {
         id: userid,
         nome: nome,
-        mensagem: mensagem.value
+        mensagem: mensagem.value,
+        cor: getRandomPredefinedColor()
     };
     if (socket.readyState === WebSocket.OPEN) {
         socket.send(JSON.stringify(mensagemJson));
@@ -57,6 +70,7 @@ socket.onmessage = function(event) {
         div.id = "msdozoto"
         const nome = document.createElement("h6")
         nome.innerHTML = resposta.nome
+        nome.style.color = resposta.cor
         const message = document.createElement("p")
         message.innerHTML = resposta.mensagem
         div.appendChild(nome)
