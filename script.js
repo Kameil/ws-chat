@@ -7,6 +7,26 @@ const container = document.getElementById("container")
 
 
 
+
+function salvarDiv() {
+    var divConteudo = document.getElementById('messages').innerHTML;
+    localStorage.setItem('conteudoDiv', divConteudo);
+}
+
+
+function carregarDiv() {
+    var divConteudo = localStorage.getItem('conteudoDiv');
+    if (divConteudo) {
+        document.getElementById('messages').innerHTML = divConteudo;
+        console.log("mensagens carregadas")
+    } else {
+        console.log("nenhuma mensagem encontrada")
+    }
+}
+
+carregarDiv()
+
+
 function getRandomPredefinedColor() {
     // Array com uma lista de cores predefinidas
     const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#33FFF9', '#F3FF33', '#7D33FF'];
@@ -88,6 +108,7 @@ socket.onmessage = function(event) {
         messagescontainer.appendChild(div)
     }
     window.scrollTo(0, document.body.scrollHeight);
+    salvarDiv()
     console.log(resposta);
 };
 
@@ -103,10 +124,12 @@ const logintitle = document.getElementById("logintitle")
 
 nameinput.addEventListener("focus", () => {
     logintitle.style.color = "white"
+    logintitle.style.transform = "scale(1.05)"
     nameinput.style.backgroundColor = "white"
 })
 nameinput.addEventListener("blur", () => {
     logintitle.style.color = "rgb(131, 130, 130)"
+    logintitle.style.transform = "scale(1)"
 })
 nameinput.addEventListener("keypress", (event) => {
     logintitle.style.color = "white"

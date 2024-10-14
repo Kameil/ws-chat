@@ -1,3 +1,6 @@
+# websocket ai
+
+
 import asyncio
 from websockets import serve
 import threading
@@ -50,5 +53,5 @@ async def main():
         await asyncio.get_running_loop().create_future()  # run forever
 
 
-threading.Thread(target=flaskserver).start()
+# threading.Thread(target=flaskserver).start()
 asyncio.run(main())
