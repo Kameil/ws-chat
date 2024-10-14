@@ -29,6 +29,10 @@ sendmessage.addEventListener("submit", (event) => {
     mensagem.value = "";
 });
 
+socket.onerror = (error) => {
+    window.location.href = "/error.html"
+}
+
 socket.onmessage = function(event) {
     const messagescontainer = document.getElementById("messages");
     const resposta = JSON.parse(event.data);
@@ -54,3 +58,37 @@ socket.onmessage = function(event) {
     window.scrollTo(0, document.body.scrollHeight);
     console.log(resposta);
 };
+
+// login form animations
+
+
+// pegar os elemento
+const nameinput = document.getElementById("username")
+const loginbtn = document.getElementById("loginbtn")
+const logintitle = document.getElementById("logintitle")
+
+// quando clicar no input
+
+nameinput.addEventListener("focus", () => {
+    logintitle.style.color = "white"
+    nameinput.style.backgroundColor = "white"
+})
+nameinput.addEventListener("blur", () => {
+    logintitle.style.color = "rgb(131, 130, 130)"
+})
+nameinput.addEventListener("keypress", (event) => {
+    logintitle.style.color = "white"
+    nameinput.style.backgroundColor = "white"
+})
+
+// quando hover no botao ai
+loginbtn.addEventListener('mouseover', () => {
+    logintitle.style.color = "rgb(131, 130, 130)"
+    nameinput.style.backgroundColor = "darkgray"
+});
+
+// Evento para detectar quando o mouse sai do elemento
+// loginbtn.addEventListener('mouseout', () => {
+//     console.log('O mouse saiu do elemento.');
+// });
+

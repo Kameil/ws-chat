@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro na Conexão</title>
+    <style>
+        body {
+            background-color: #121212; /* Cor de fundo preta */
+            color: #ffffff; /* Cor do texto branca */
+            font-family: Arial, sans-serif; /* Fonte do texto */
+            display: flex; /* Usar flexbox para centralizar o conteúdo */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura total da viewport */
+            margin: 0; /* Remove margens padrão */
+            text-align: center; /* Centraliza o texto */
+        }
+        h1 {
+            font-size: 2.5rem; /* Tamanho da fonte do título */
+            margin: 0;
+            background-color: red; /* Remove margens do título */
+        }
+        p {
+            font-size: 1.2rem; /* Tamanho da fonte da mensagem */
+            margin: 10px 0 0; /* Margens da mensagem */
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: darkgray;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Erro na Conexão</h1>
+        <p>Não foi possível estabelecer uma conexão com o servidor.</p>
+        <p>Por favor, tente novamente mais tarde.</p>
+        <button id="tn">Acessar novamente</button>
+    </div>
+    <script>
+        const reload = document.getElementById("tn")
+        reload.addEventListener("click", () => {
+            window.location.href = "/index.html"
+        })
+
+    </script>
+</body>
+</html>
