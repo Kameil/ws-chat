@@ -1,4 +1,4 @@
-const socket = new WebSocket('wss://pkf12q20-8766.brs.devtunnels.ms');
+const socket = new WebSocket('wss://pkf12q20-8765.brs.devtunnels.ms');
 const sendmessage = document.getElementById("sendmessage");
 const loginform = document.getElementById("login")
 const loginsct = document.getElementById("bglogin")
