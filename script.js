@@ -88,12 +88,17 @@ const statusp = document.getElementById("statusp")
 socket.onopen = () => {
     
     statuspopup.style.display = "none"
+    statuspopup.style.display = "block"
+    statuspopup.style.backgroundColor = 'rgb(36, 161, 36)'
+    statusp.innerHTML = "Conectado"
+    statuspopup.style.opacity = "0.85"
 }
 
 socket.onerror = (error) => {
     statuspopup.style.display = "block"
     statuspopup.style.backgroundColor = 'red'
     statusp.innerHTML = "ocorreu um erro!"
+    statuspopup.style.animation = "l1 1s linear infinite alternate"
     
 
 }
@@ -102,6 +107,7 @@ socket.onclose = () => {
     statuspopup.style.display = "block"
     statuspopup.style.backgroundColor = 'red'
     statusp.innerHTML = "Desconectado."
+    statuspopup.style.animation = "l1 1s linear infinite alternate"
 }
 
 socket.onmessage = function(event) {
