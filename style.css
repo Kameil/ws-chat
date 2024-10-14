@@ -198,11 +198,17 @@ body {
     border-radius: 40px;
     background-color:  rgb(85, 85, 85);
     color: white;
+    transition: all 1s ease;
 }
 
 #sm input:focus {
     outline: 2px solid  rgb(71, 71, 71);
 }
+
+#sm input:active {
+    outline: 2px solid rgb(6, 110, 158);
+}
+
 
 #sm button {
     padding: 15px;
@@ -212,4 +218,20 @@ body {
     white-space: nowrap;
     border-radius: 40px;
     font-size: 0.85rem;
+    user-select: none;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+#sm button:hover {
+    transform: scale(1.05);
+}
+#sm button:focus {
+    outline: 2px solid rgb(6, 110, 158);
+}
+
+
+
+#sm button:active {
+    background-color: rgb(75, 75, 75);
 }
