@@ -211,12 +211,13 @@ body {
 
 
 #sm button {
+    background-color: dimgray;
     padding: 15px;
     border: none;
     cursor: pointer;
     flex-shrink: 0;
     white-space: nowrap;
-    border-radius: 40px;
+    border-radius: 50%;
     font-size: 0.85rem;
     user-select: none;
     transition: all 0.2s ease;
