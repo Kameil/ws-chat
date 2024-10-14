@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://192.168.40.159:8765');
+const socket = new WebSocket('wss://pkf12q20-8765.brs.devtunnels.ms');
 const sendmessage = document.getElementById("sendmessage");
 const loginform = document.getElementById("login")
 const loginsct = document.getElementById("bglogin")
@@ -30,6 +30,10 @@ sendmessage.addEventListener("submit", (event) => {
 });
 
 socket.onerror = (error) => {
+    window.location.href = "/error.html"
+}
+
+socket.onclose = () => {
     window.location.href = "/error.html"
 }
 

@@ -5,7 +5,7 @@ import threading
 
 
 
-def flask():
+def flaskserver():
     from flask import Flask
     from flask import send_file
 
@@ -18,8 +18,10 @@ def flask():
 
     @app.route("/script.js")
     def script():
-        with open("script.js", "r", encoding="utf-8") as file:
-            return file.read()
+        return send_file("script.js", "text/javascript")
+    @app.route("/script.js")
+    def script():
+        return send_file("error.html")
 
     @app.route("/style.css")
     def style():
@@ -44,9 +46,9 @@ async def echo(websocket):
         connected_clients.remove(websocket)
 
 async def main():
-    async with serve(echo, "192.168.40.159", 8765):
+    async with serve(echo, "0.0.0.0", 8765):
         await asyncio.get_running_loop().create_future()  # run forever
 
 
-threading.Thread(target=flask).start()
+threading.Thread(target=flaskserver).start()
 asyncio.run(main())
