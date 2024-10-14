@@ -17,6 +17,8 @@ function getRandomPredefinedColor() {
     return colors[randomIndex];
 }
 
+cor = getRandomPredefinedColor()
+
 const userid = Math.floor(Math.random() * 1000); 
 
 loginform.addEventListener("submit", (event) => {
@@ -35,7 +37,7 @@ sendmessage.addEventListener("submit", (event) => {
         id: userid,
         nome: nome,
         mensagem: mensagem.value,
-        cor: getRandomPredefinedColor()
+        cor: cor
     };
     if (socket.readyState === WebSocket.OPEN) {
         socket.send(JSON.stringify(mensagemJson));
