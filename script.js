@@ -145,20 +145,27 @@ const logintitle = document.getElementById("logintitle")
 nameinput.addEventListener("focus", () => {
     logintitle.style.color = "white"
     logintitle.style.transform = "scale(1.05)"
+    nameinput.style.transform = "scale(1.05)"
     nameinput.style.backgroundColor = "white"
 })
 nameinput.addEventListener("blur", () => {
     logintitle.style.color = "rgb(131, 130, 130)"
     logintitle.style.transform = "scale(1)"
+    nameinput.style.transform = "scale(1)"
+    nameinput.style.backgroundColor = "darkgray"
 })
 nameinput.addEventListener("keypress", (event) => {
     logintitle.style.color = "white"
+    logintitle.style.transform = "scale(1.05)"
+    nameinput.style.transform = "scale(1.05)"
     nameinput.style.backgroundColor = "white"
 })
 
 // quando hover no botao ai
 loginbtn.addEventListener('mouseover', () => {
     logintitle.style.color = "rgb(131, 130, 130)"
+    logintitle.style.transform = "scale(1)"
+    nameinput.style.transform = "scale(1)"
     nameinput.style.backgroundColor = "darkgray"
 });
 
