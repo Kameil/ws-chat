@@ -113,12 +113,19 @@ body {
 }
 
 #mensagem, #msdozoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     align-self: flex-end;
+    flex-wrap: wrap;
     background-color: rgb(49, 48, 48);
     color: white;
     border-radius: 20px 20px 0px 20px;
     padding: 30px;
-    max-width: 350px;
+    max-width: 75%;
+    width: auto;
+    height: auto;
     margin-right: 15px;
 
 }
@@ -128,15 +135,28 @@ body {
     border-radius: 0px 20px 20px 20px;
     margin-right: 0px;
     margin-left: 15px;
+    
+    max-width: 50%;
 }
 
 #msdozoto h6 {
+    align-items: flex-start;
     margin-right: 10px;
+    font-size: 1rem;
     color: rgba(16, 143, 54, 0.589);
 }
 
-#msdozoto p {
-    margin-left: 5px;
+#msdozoto p{
+    flex-wrap: wrap;
+    margin-left: -10px;
+    width: 100%;
+    word-wrap: break-word; 
+}
+#mensagem p {
+    justify-content: end;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
 }
 
 #mensagem:last-of-type{
