@@ -86,7 +86,33 @@ body {
     background-color: rgba(7, 176, 255, 0.541);
 }
 
+#status {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(36, 161, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    border-radius: 0px 5px 5px 5px;
+    height: 40px;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
 
+#status:hover {
+    transform: scale(1.05);
+}
+
+#status {
+    font-weight: bold;
+    font-family: sans-serif;
+    animation: l1 1s linear infinite alternate;
+  }
+  @keyframes l1 {to{opacity: 0}}
 
 .container {
     

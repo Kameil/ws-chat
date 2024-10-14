@@ -24,10 +24,18 @@ sendmessage.addEventListener("submit", (event) => {
         nome: nome,
         mensagem: mensagem.value
     };
-    socket.send(JSON.stringify(mensagemJson));
+    if (socket.readyState === WebSocket.OPEN) {
+        socket.send(JSON.stringify(mensagemJson));
+    }
+    
 
     mensagem.value = "";
 });
+
+socket.onopen = () => {
+    const conectingbar = document.getElementById("status")
+    conectingbar.style.display = "none"
+}
 
 socket.onerror = (error) => {
     let url = window.location.href
