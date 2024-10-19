@@ -91,7 +91,7 @@ socket.onopen = () => {
     statuspopup.style.display = "block"
     statuspopup.style.backgroundColor = 'rgb(36, 161, 36)'
     statusp.innerHTML = "Conectado"
-    statuspopup.style.opacity = "0.85"
+    statuspopup.style.opacity = "0.50"
     statuspopup.style.animation = "none"
 }
 
