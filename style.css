@@ -126,31 +126,38 @@ body {
     display: none;
 }
 
-#dhistory {
+.btn-f {
     position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
+    
     background: none;
     border: none;
     border-radius: 50%;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-#dhistory:hover {
-    background-color: rgb(255, 0, 0);
+.btn-f:hover {
+    background-color: gray;
+    box-shadow: 0px 3px 10px black;
     transform: scale(1.10);
 }
 
-#dhistory:active {
-    animation: tocima 0.2s linear alternate;
+.btn-f:active {
+    opacity: 0.1;
 }
 
-@keyframes tocima{
-    to{
-        top: -0
-    }
+#reload {
+    top: 17px;
+    left: 150px;
+    width: 30px;
+    height: 30px;
+}
+
+#dhistory {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 #messages {

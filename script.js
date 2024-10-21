@@ -181,3 +181,8 @@ loginbtn.addEventListener('mouseover', () => {
 //     console.log('O mouse saiu do elemento.');
 // });
 
+const reload = document.getElementById("reload")
+
+reload.addEventListener('click', () => {
+    window.location.reload()
+})
