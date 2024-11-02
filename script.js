@@ -184,5 +184,8 @@ loginbtn.addEventListener('mouseover', () => {
 const reload = document.getElementById("reload")
 
 reload.addEventListener('click', () => {
-    window.location.reload()
+    setTimeout(() => {
+        window.location.reload()
+    }, 350);
+    
 })
