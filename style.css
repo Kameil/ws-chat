@@ -30,7 +30,6 @@ body {
 }
 
 .login--form {
-    user-select: none;
     box-shadow: 0px 0px 100px black;
     width: 400px;
     height: 300px;
@@ -128,7 +127,6 @@ body {
 }
 
 .btn-f {
-    user-select: none;
     position: fixed;
     
     background: none;

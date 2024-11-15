@@ -22,8 +22,6 @@ apagrbtn.addEventListener("click", () => {
 })
 
 
-
-
 function salvarDiv() {
     var divConteudo = document.getElementById('messages').innerHTML;
     localStorage.setItem('conteudoDiv', divConteudo);
@@ -61,8 +59,17 @@ loginform.addEventListener("submit", (event) => {
     event.preventDefault()
     const nomeinput = document.getElementById("username")
     nome = nomeinput.value
-    loginsct.style.display = "none"
-    container.style.display = "flex"
+    $("#bglogin").fadeOut(500, () => {
+        container.style.display = "flex"
+        $("#container")
+            .css("display", "flex")
+            .hide()
+            .fadeIn(500, () => {
+            
+        })
+    })
+    // loginsct.style.display = "none"
+    // container.style.display = "flex"
 
 })
 
