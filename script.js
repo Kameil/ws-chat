@@ -192,7 +192,10 @@ const reload = document.getElementById("reload")
 
 reload.addEventListener('click', () => {
     setTimeout(() => {
-        window.location.reload()
+        $("#container").fadeOut(500, () => {
+            window.location.reload()
+        })
+        
     }, 350);
     
 })
