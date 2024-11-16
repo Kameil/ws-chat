@@ -31,12 +31,20 @@ function salvarDiv() {
 function carregarDiv() {
     var divConteudo = localStorage.getItem('conteudoDiv');
     if (divConteudo) {
-        document.getElementById('messages').innerHTML = divConteudo;
-        console.log("mensagens carregadas")
+        const $messages = $('#messages');
+        const $container = $("#container");
+        $messages.html(divConteudo);
+
+        // Faz o scroll até o final do elemento
+        $container.scrollTop(100);
+
+        console.log("mensagens carregadas");
     } else {
-        console.log("nenhuma mensagem encontrada")
+        console.log("nenhuma mensagem encontrada");
     }
 }
+
+
 
 carregarDiv()
 
@@ -67,10 +75,17 @@ loginform.addEventListener("submit", (event) => {
             .fadeIn(500, () => {
             
         })
-    })
-    // loginsct.style.display = "none"
-    // container.style.display = "flex"
-
+    });
+    var divConteudo = localStorage.getItem('conteudoDiv');
+    if (divConteudo) {
+        setInterval(() => {
+            $('html, body').animate({
+                scrollTop: $(document).height()
+              }, 'slow');          
+        }, 500);
+    }
+    
+    
 })
 
 sendmessage.addEventListener("submit", (event) => {
