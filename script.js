@@ -82,7 +82,7 @@ loginform.addEventListener("submit", (event) => {
             $('html, body').animate({
                 scrollTop: $(document).height()
               }, 'slow');          
-        }, 500);
+        }, 1000);
     }
     
     
