@@ -78,7 +78,7 @@ loginform.addEventListener("submit", (event) => {
     });
     var divConteudo = localStorage.getItem('conteudoDiv');
     if (divConteudo) {
-        setInterval(() => {
+        setTimeout(() => {
             $('html, body').animate({
                 scrollTop: $(document).height()
               }, 'slow');          
