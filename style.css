@@ -198,6 +198,15 @@ body {
 #msdozoto:last-of-type{
     margin-bottom: 125px;
 }
+#mensagem:first-of-type {
+    margin-top: 65px;
+}
+
+#msdozoto:first-of-type {
+    margin-top: 65px;
+}
+
+
 
 
 #footer {
