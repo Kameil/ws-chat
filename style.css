@@ -126,39 +126,7 @@ body {
     display: none;
 }
 
-.btn-f {
-    position: fixed;
-    
-    background: none;
-    border: none;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
 
-.btn-f:hover {
-    background-color: gray;
-    box-shadow: 0px 3px 10px black;
-    transform: scale(1.10);
-}
-
-.btn-f:active {
-    opacity: 0.1;
-}
-
-#reload {
-    top: 17px;
-    left: 150px;
-    width: 30px;
-    height: 30px;
-}
-
-#dhistory {
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-}
 
 #messages {
     box-shadow: 0px 0px 5px rgb(128, 128, 128);
@@ -229,6 +197,41 @@ body {
 }
 #msdozoto:last-of-type{
     margin-bottom: 125px;
+}
+
+
+#footer {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    background-color: rgba(102, 102, 102, 0.9);
+    padding: 10px;
+    gap: 10px;
+}
+
+
+.btn-f {
+    background-color:  rgb(85, 85, 85);
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.btn-f:hover {
+    background-color: gray;
+    box-shadow: 0px 3px 10px black;
+    transform: scale(1.10);
+}
+
+.btn-f:active {
+    opacity: 0.1;
 }
 
 #sm {

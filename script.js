@@ -81,7 +81,11 @@ loginform.addEventListener("submit", (event) => {
         setTimeout(() => {
             $('html, body').animate({
                 scrollTop: $(document).height()
-              }, 'slow');          
+              }, 'slow');
+            const status = $("#status")
+            const footer = $("#footer")
+            status.css("position", "static")
+            footer.prepend(status)
         }, 1000);
     }
     
