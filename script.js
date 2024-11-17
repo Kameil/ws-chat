@@ -73,7 +73,10 @@ loginform.addEventListener("submit", (event) => {
             .css("display", "flex")
             .hide()
             .fadeIn(500, () => {
-            
+                const status = $("#status")
+                const footer = $("#footer")
+                status.css("position", "static")
+                footer.prepend(status)
         })
     });
     var divConteudo = localStorage.getItem('conteudoDiv');
@@ -82,10 +85,7 @@ loginform.addEventListener("submit", (event) => {
             $('html, body').animate({
                 scrollTop: $(document).height()
               }, 'slow');
-            const status = $("#status")
-            const footer = $("#footer")
-            status.css("position", "static")
-            footer.prepend(status)
+            
         }, 1000);
     }
     
