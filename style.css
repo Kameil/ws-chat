@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    user-select: none;
 }
 
 :root {
@@ -129,6 +130,7 @@ body {
 
 
 #messages {
+    user-select: text;
     box-shadow: 0px 0px 5px rgb(128, 128, 128);
     background-color: rgb(102, 102, 102);
     display: flex;
@@ -224,6 +226,7 @@ body {
 
 
 .btn-f {
+    user-select: none;
     background-color:  rgb(85, 85, 85);
     border: none;
     border-radius: 10px;
