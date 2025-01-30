@@ -176,7 +176,7 @@ const logintitle = document.getElementById("logintitle")
 // quando clicar no input
 
 nameinput.addEventListener("focus", () => {
-    logintitle.style.color = "white"
+    logintitle.style.color = "black"
     logintitle.style.transform = "scale(1.05)"
     nameinput.style.transform = "scale(1.05)"
     nameinput.style.backgroundColor = "white"
@@ -185,7 +185,7 @@ nameinput.addEventListener("blur", () => {
     logintitle.style.color = "rgb(131, 130, 130)"
     logintitle.style.transform = "scale(1)"
     nameinput.style.transform = "scale(1)"
-    nameinput.style.backgroundColor = "darkgray"
+    nameinput.style.backgroundColor = "whitesmoke"
 })
 nameinput.addEventListener("keypress", (event) => {
     logintitle.style.color = "white"
@@ -199,7 +199,7 @@ loginbtn.addEventListener('mouseover', () => {
     logintitle.style.color = "rgb(131, 130, 130)"
     logintitle.style.transform = "scale(1)"
     nameinput.style.transform = "scale(1)"
-    nameinput.style.backgroundColor = "darkgray"
+    nameinput.style.backgroundColor = "whitesmoke"
 });
 
 // Evento para detectar quando o mouse sai do elemento

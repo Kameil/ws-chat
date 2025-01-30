@@ -24,24 +24,25 @@ body {
     height: 100dvh;
     
     width: 100%;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(211, 209, 209);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .login--form {
-    box-shadow: 0px 0px 100px black;
-    width: 400px;
+    box-shadow: 0px 0px 1px black;
+    width: 300px;
     height: 300px;
-    background-color: rgb(53, 54, 54);
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    border-radius: 40px;
+    border-radius: 5px;
     margin: 20px;
+    border: 1px solid gray;
 }
 
 .login--form h1 {
@@ -55,15 +56,15 @@ body {
 }
 
 .login--form input {
-    background-color: darkgray;
+    background-color: whitesmoke;
     color: rgb(31, 31, 31);
-    box-shadow: 0px 0px 50px rgb(115, 109, 173);
+    /* box-shadow: 0px 0px 50px rgb(115, 109, 173); */
+    border: 1px solid gray;
     width: 75%;
     padding-left: 10px;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
-    border: none;
     transition: all 1s ease;
 }
 
@@ -75,16 +76,16 @@ body {
     margin-bottom: 40px;
     width: 75%;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     color: beige;
     cursor: pointer;
     background-color: rgba(7, 87, 124, 0.541);
-    box-shadow: 0px 0px 50px rgb(115, 109, 173);
+    /* box-shadow: 0px 0px 50px rgb(115, 109, 173); */
     transition: background-color 1s ease;
 }
 .login--form button:hover {
-    background-color: rgba(7, 176, 255, 0.541);
+    background-color: rgba(27, 81, 104, 0.541);
 }
 
 #status {
